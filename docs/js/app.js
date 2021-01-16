@@ -10,42 +10,28 @@ var app = new Framework7({
     swipe: true,
   },
   // Add default routes
-routes = [
-  {
-    path: '/about/',
-    url: '../pages/about/about.html',
-    // Pass "tabs" property to route
-    tabs: [
-      // First (default) tab has the same url as the page itself
+    routes: [
       {
-        path: '/',
-        id: 'about',
-        // Fill this tab content from content string
-        content: `
-          <div class="block">
-            <h3>About Me</h3>
-            <p>...</p>
-          </div>
-        `
+        name: 'about',
+        path: '/about/',
+        url: 'about.html',
       },
-      // Second tab
       {
-        path: '/contacts/',
-        id: 'contacts',
-        // Fill this tab content via Ajax request
-        url: '../pages/about-me/contacts.html',
+        name: 'index',
+        path: '/index/',
+        url: 'index.html'
       },
-      // Third tab
       {
-        path: '/cv/',
-        id: 'cv',
-        // Load this tab content as a component via Ajax request
-        componentUrl: '../pages/about-me/cv.html',
+        name: 'preview',
+        path: '/preview/',
+        url: './preview.html'
       },
     ],
-  }
-]
   // ... other parameters
 });
 
 var mainView = app.views.create('.view-main');
+ $$('p').on('click', function(){
+  self.app.router.navigate('/preview/', {reloadCurrent: true});
+ });
+
