@@ -30,6 +30,8 @@ var app = new Framework7({
   // ... other parameters
 });
 
+var mainView = app.views.main;
+var homeView = app.views.home;
 var mainView = app.views.create('.view-main');
  $$('p').on('click', function(){
   self.app.router.navigate('/preview/', {reloadCurrent: true});
