@@ -13,7 +13,7 @@ var app = new Framework7({
 routes = [
   {
     path: '/about/',
-    url: './pages/about/about.html',
+    url: '../pages/about/about.html',
     // Pass "tabs" property to route
     tabs: [
       // First (default) tab has the same url as the page itself
@@ -33,14 +33,14 @@ routes = [
         path: '/contacts/',
         id: 'contacts',
         // Fill this tab content via Ajax request
-        url: './pages/about-me/contacts.html',
+        url: '../pages/about-me/contacts.html',
       },
       // Third tab
       {
         path: '/cv/',
         id: 'cv',
         // Load this tab content as a component via Ajax request
-        componentUrl: './pages/about-me/cv.html',
+        componentUrl: '../pages/about-me/cv.html',
       },
     ],
   }
