@@ -44,7 +44,7 @@ routes = [
       },
     ],
   }
-],
+]
   // ... other parameters
 });
 
