@@ -15,6 +15,9 @@ var app = new Framework7({
         name: 'about',
         path: '/about/',
         url: 'about.html',
+        options: {
+        transition: 'f7-push',
+        },
       },
       {
         name: 'index',
