@@ -12,7 +12,7 @@ var app = new Framework7({
   // Add default routes
   routes: [
     {
-      path: '/about/',
+      path: '/pages/about/',
       url: 'about.html',
     },
   ],
