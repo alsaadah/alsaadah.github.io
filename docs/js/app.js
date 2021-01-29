@@ -1,14 +1,16 @@
 var app = new Framework7({
-  // App root element
-  el: '#app',
-  // App Name
+  el:'#app',
   name: 'AL-Saadah',
-  // App id
-  id: 'com.myapp.test',
-  // Enable swipe panel
+  theme,store:store,
+  routes:routes,
+  popup:{closeOnEscape:true,},
+  sheet:{closeOnEscape:true,},
+  popover:{closeOnEscape:true,},
+  actions:{closeOnEscape:true,},
   panel: {
     swipe: true,
   },
+  
   // Add default routes
     routes: [
   {
