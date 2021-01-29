@@ -1,12 +1,6 @@
 var app = new Framework7({
   el:'#app',
   name: 'AL-Saadah',
-  theme,store:store,
-  routes:routes,
-  popup:{closeOnEscape:true,},
-  sheet:{closeOnEscape:true,},
-  popover:{closeOnEscape:true,},
-  actions:{closeOnEscape:true,},
   panel: {
     swipe: true,
   },
