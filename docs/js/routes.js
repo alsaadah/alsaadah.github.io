@@ -1,6 +1,6 @@
 var routes = [
   {
     path: '/food',
-    url: '/food.html',
+    url: 'food.html',
   },
 ];
