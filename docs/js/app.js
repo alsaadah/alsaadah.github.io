@@ -14,16 +14,9 @@ var app = new Framework7({
   {
     path: '/food/',
     url: './food.html',
-    master: true,
     options: {
         transition: 'f7-push',
         },
-    detailRoutes: [
-      {
-        path: '/food/:postId/',
-        url: './food-detail.html',
-      },
-    ],
   },
     ],
   // ... other parameters
