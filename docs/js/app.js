@@ -13,7 +13,7 @@ var app = new Framework7({
     routes: [
   {
     path: '/food/',
-    url: './food.html',
+    url: '/food.html',
     options: {
         transition: 'f7-push',
         },
