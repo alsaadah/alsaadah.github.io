@@ -1,22 +1,22 @@
 var routes = [
   {
-    path: '/about',
+    path: '/about/',
     url: 'about.html',
   },
   {
-    path: '/jasa',
+    path: '/jasa/',
     url: 'jasa.html',
   },
   {
-    path: '/fashion',
+    path: '/fashion/',
     url: 'fashion.html',
   },
   {
-    path: '/preloved',
+    path: '/preloved/',
     url: 'preloved.html',
   },
   {
-    path: '/food',
+    path: '/food/',
     url: 'food.html',
   },
 ];
