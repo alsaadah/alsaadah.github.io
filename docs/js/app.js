@@ -11,24 +11,20 @@ var app = new Framework7({
   },
   // Add default routes
     routes: [
-      {
-        name: 'about',
-        path: '/about/',
-        url: 'about.html',
-        options: {
+  {
+    path: '/food/',
+    url: './food.html',
+    master: true,
+    options: {
         transition: 'f7-push',
         },
-      },
+    detailRoutes: [
       {
-        name: 'index',
-        path: '/index/',
-        url: 'index.html'
+        path: '/food/:postId/',
+        url: './food-detail.html',
       },
-      {
-        name: 'preview',
-        path: '/preview/',
-        url: './preview.html'
-      },
+    ],
+  },
     ],
   // ... other parameters
 });
