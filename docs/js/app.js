@@ -1,27 +1,34 @@
+// Dom7
+var $ = Dom7;
+
+// Theme
+var theme = 'auto';
+if (document.location.search.indexOf('theme=') >= 0) {
+  theme = document.location.search.split('theme=')[1].split('&')[0];
+}
+
+// Init App
 var app = new Framework7({
-  el:'#app',
-  name: 'AL-Saadah',
-  panel: {
-    swipe: true,
+  id: 'io.framework7.testapp',
+  el: '#app',
+  theme,
+  // store.js,
+  store: store,
+  // routes.js,
+  routes: routes,
+  popup: {
+    closeOnEscape: true,
   },
-  
-  // Add default routes
-    routes: [
-  {
-    path: '/food/',
-    url: '/food.html',
-    options: {
-        transition: 'f7-push',
-        },
+  sheet: {
+    closeOnEscape: true,
   },
-    ],
-  // ... other parameters
+  popover: {
+    closeOnEscape: true,
+  },
+  actions: {
+    closeOnEscape: true,
+  },
+  vi: {
+    placementId: 'pltd4o7ibb9rc653x14',
+  },
 });
-
-var mainView = app.views.main;
-var homeView = app.views.home;
-var mainView = app.views.create('.view-main');
- $$('p').on('click', function(){
-  self.app.router.navigate('/preview/', {reloadCurrent: true});
- });
-
