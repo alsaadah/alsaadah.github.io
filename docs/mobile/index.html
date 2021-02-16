@@ -1,67 +1,90 @@
+
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Color theme for statusbar (Android only) -->
     <meta name="theme-color" content="#2196f3">
     <!-- Your app title -->
-    <title>Al-Saadah</title>
+    <title>My App</title>
     <!-- Path to Framework7 Library Bundle CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.14/css/framework7.min.css">
-    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="https://framework7.io/packages/core/framework7-bundle.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="path/to/my-app.css">
+<style>
+  .demo-swiper .swiper-slide {
+    font-size: 25px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #000;
+  }
+
+  .demo-swiper .swiper-slide {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background: #fff;
+  }
+
+  .demo-swiper {
+    margin: 0px 0 35px;
+    font-size: 18px;
+    height: 100%;
+  }
+
+  .demo-swiper.demo-swiper-auto .swiper-slide {
+    width: 85%;
+  }
+
+  .demo-swiper.demo-swiper-auto .swiper-slide:nth-child(2n) {
+    width: 70%;
+  }
+
+  .demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
+    width: 30%;
+  }
+</style>
   </head>
   <body>
     <!-- App root element -->
     <div id="app">
-      <div class="views" id="app">
-        
+
       <!-- Your main view, should have "view-main" class -->
       <div class="view view-main">
-        
         <!-- Initial Page, "data-name" contains page name -->
         <div data-name="home" class="page">
 
-          <!-- Top Navbar -->
-          <div class="navbar">
-            <div class="navbar-bg"></div>
-            <div class="navbar-inner">
-              <div class="title">Awesome App</div>
-            </div>
-          </div>
-
-          <!-- Bottom Toolbar -->
-          <div class="toolbar toolbar-bottom">
-            <div class="toolbar-inner">
-              <!-- Toolbar links -->
-              <a href="#" class="link">Link 1</a>
-              <a href="#" class="link">Link 2</a>
-            </div>
-          </div>
-
           <!-- Scrollable page content -->
           <div class="page-content">
-            <p>Page content goes here</p>
-            <!-- Link to another page -->
-            <a href="/about/" data-transition="f7-push">About app</a>
+
+      <div class="swiper-container swiper-init demo-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div>
+        </div>
+      </div>
+
           </div>
         </div>
-        
       </div>
- 
     </div>
-    <!-- main view -->
-<div class="view view-main view-init">
-Home
-    </div>
-    </div>
-    
-    <!-- Path to Framework7 Library Bundle JS-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.14/js/framework7.min.js"></script>
-    <!-- Path to your app js-->
-    <script>
-      var app = new Framework7({
+
+    <script type="text/javascript" src="https://framework7.io/packages/core/framework7-bundle.min.js"></script>
+    <script type="text/javascript">
+var app = new Framework7({
   // App root element
   el: '#app',
   // App Name
@@ -79,8 +102,13 @@ Home
       url: 'about.html',
     },
   ],
-  // ... other parameters
+
 });
-    </script>
+var swiper = app.swiper.create('.swiper-container', {
+    speed: 400,
+    spaceBetween: 100
+});
+</script>
+
   </body>
 </html>
