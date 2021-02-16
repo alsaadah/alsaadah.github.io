@@ -16,6 +16,7 @@
     <!-- App root element -->
     <div id="app">
       <div class="views" id="app">
+        
       <!-- Your main view, should have "view-main" class -->
       <div class="view view-main">
         
@@ -56,14 +57,31 @@ Home
     </div>
     </div>
     
-<!-- another view -->
-<div class="view view-init" data-name="about">
-  About
-</div>
-    
     <!-- Path to Framework7 Library Bundle JS-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.14/js/framework7.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="../js/app.js"></script>
+    <script>
+      var app = new Framework7({
+  // App root element
+  el: '#app',
+  // App Name
+  name: 'My App',
+  // App id
+  id: 'com.myapp.test',
+  // Enable swipe panel
+  panel: {
+    swipe: true,
+  },
+  // Add default routes
+  routes: [
+    {
+      path: '/about/',
+      url: 'about.html',
+    },
+  ],
+  // ... other parameters
+});
+    </script>
   </body>
 </html>
