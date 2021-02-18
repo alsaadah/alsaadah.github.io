@@ -22,6 +22,20 @@
 
   <!-- App root -->
   <div id="app">
+
+       <!-- Nested panel -->
+        <div class="panel panel-left panel-cover panel-init theme-dark" id="panel-nested"
+          data-container-el="#panel-page">
+          <div class="page">
+            <div class="page-content">
+              <div class="block block-strong">
+                <p>This is page-nested Panel.</p>
+                <p><a href="#" class="panel-close">Close me</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
     <!-- Views/Tabs container -->
     <div class="views tabs-swipeable-wrap tabs">
    
@@ -36,7 +50,7 @@
           <a href="#view-settings" class="tab-link">
             <i class="f7-icons">bag</i>
           </a>
-          <a href="#" class="tab-link">
+          <a href="#" data-panel="#panel-nested" class="tab-link panel-open">
             <i class="f7-icons">equal</i>
           </a>
         </div>
