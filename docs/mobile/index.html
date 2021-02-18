@@ -220,5 +220,8 @@ var swiper = app.swiper.create('.swiper-container', {
     return $render;
   }
 </script>
+<script>
+  let theme='ios';if(window.location.href.indexOf('theme=md')>=0)theme='md';if(window.location.href.indexOf('theme=aurora')>=0)theme='aurora';const themePlugin={params:{theme,},};Framework7.use(themePlugin);const app=new Framework7({el:'#app',componentUrl:'./sheet-modal.f7.html',});
+        </script>
   </body>
 </html>
