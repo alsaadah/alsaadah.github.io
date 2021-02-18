@@ -22,29 +22,41 @@
 
   <!-- App root -->
   <div id="app">
+    <!-- Views/Tabs container -->
+    <div class="views tabs">
+      <!--
+        Tabbar for switching views-tabs. Should be a first child in Views.
+        Additional "toolbar-bottom" class to set it on bottom
+      -->
+      <div class="toolbar tabbar toolbar-bottom">
+        <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+            <i class="icon icon-home"></i>
+          </a>
+          <a href="#view-catalog" class="tab-link">
+            <i class="icon icon-catalog"></i>
+          </a>
+          <a href="#view-settings" class="tab-link">
+            <i class="icon icon-settings"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main tab tab-active">
+       Pg 1
+      </div>
 
-<div class="page">
-<!-- Tabs swipeable wrapper, required to switch tabs with swipes -->
-<div class="tabs-swipeable-wrap">
-  <!-- Tabs, tabs wrapper -->
-  <div class="tabs">
-    <!-- Tab 1, active by default -->
-    <div id="tab1" class="tab tab-active">
-      ... Tab 1 content ...
-    </div>
-    <!-- Tab 2 -->
-    <div id="tab2" class="tab">
-      ... Tab 2 content ...
-    </div>
-    <!-- Tab 3 -->
-    <div id="tab3" class="tab">
-      ... Tab 3 content ...
+      <!-- Catalog View -->
+      <div id="view-catalog" class="view tab">
+        Pg2
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-settings" class="view tab">
+        Pg3
+      </div>
     </div>
   </div>
-</div>
-</div>
-</div>
-</div>
 
     <script type="text/javascript" src="https://framework7.io/packages/core/framework7-bundle.min.js"></script>
     <script type="text/javascript">
