@@ -20,8 +20,7 @@
   </head>
   <body>
   <!-- App root -->
-  <div id="app">
-<div class="tabs-swipeable-wrap">
+  <div id="app" class="tabs-swipeable-wrap">
 
     <!-- Views/Tabs container -->
     <div class="views tabs">
@@ -43,30 +42,28 @@
         </div>
       </div>
 
-<!-- Top Tabs -->
-<div class="tabs tabs-top">
-  <div class="tab tab1 tab-active">Tab 1</div>
-  <div class="tab tab2">Tab 2</div>
-  <div class="tab tab3">Tab 3</div>
-</div>
-
       <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
       <div id="view-home" class="view view-main tab tab-active">
-       Homepage
+       <div class="block">
+        Homepage
+       </div>
       </div>
 
       <!-- Catalog View -->
       <div id="view-catalog" class="view tab">
+       <div class="block">
         Second page
+       </div>
       </div>
 
       <!-- Settings View -->
       <div id="view-settings" class="view tab">
-        Third page
+       <div class="block">
+        The third page.
+       </div>
       </div>
     </div>
   </div>
-</div>
 
     <script type="text/javascript" src="https://framework7.io/packages/core/framework7-bundle.min.js"></script>
     <script type="text/javascript">
