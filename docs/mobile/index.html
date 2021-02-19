@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@4.0.1/css/framework7-icons.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-
+.hide {display: none! important;
 </style>
   </head>
   <body>
@@ -23,21 +23,9 @@
   <!-- App root -->
   <div id="app">
 
-       <!-- Nested panel -->
-        <div class="panel panel-left panel-cover panel-init theme-dark" id="panel-nested"
-          data-container-el="#panel-page">
-          <div class="page">
-            <div class="page-content">
-              <div class="block block-strong">
-                <p>This is page-nested Panel.</p>
-                <p><a href="#" class="panel-close">Close me</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
 
     <!-- Views/Tabs container -->
-    <div class="views tabs-swipeable-wrap tabs">
+    <div class="views tabs hide">
    
       <div class="toolbar tabbar toolbar-bottom">
         <div class="toolbar-inner">
@@ -55,6 +43,7 @@
           </a>
         </div>
       </div>
+
       <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
       <div id="view-home" class="view view-main tab tab-active">
        Pg 1
@@ -69,7 +58,9 @@
       <div id="view-settings" class="view tab">
         Pg3
       </div>
+
     </div>
+
   </div>
 
     <script type="text/javascript" src="https://framework7.io/packages/core/framework7-bundle.min.js"></script>
