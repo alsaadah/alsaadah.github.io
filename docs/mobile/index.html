@@ -44,6 +44,12 @@
     -webkit-align-items: center;
     align-items: center;
 }
+.navbar-fixed .page-content.with-subnavbar, .navbar-fixed .subnavbar~.page-content, .navbar-fixed .with-subnavbar .page-content, .navbar-through .page-content.with-subnavbar, .navbar-through .subnavbar~.page-content, .navbar-through .with-subnavbar .page-content {
+    padding-top: 80px;
+}
+.mypage {
+    background: #fff;
+}
 .button.active {
     background: transparent;
     color: #888;
@@ -94,27 +100,32 @@ a {
                <div data-page = "home" class = "page with-subnavbar">
                       <div class = "subnavbar bg-white no-shadow">
                           <div class = "buttons-row">
-                              <a href = "#tab1" class = "button col button active tab-link"><i class="f7-icons">house_alt</i></a>
-                              <a href = "#tab2" class = "button col button tab-link"><i class="f7-icons">bag</i></a>
-                              <a href = "#tab3" class = "button col button tab-link"><i class="f7-icons">info_circle
-</i></a>
+                              <a href = "#tab1" class = "button col button active tab-link"><i class="f7-icons">house_alt</i> <span>Home</span></a>
+                              <a href = "#tab2" class = "button col button tab-link"><i class="f7-icons">bag</i> <span>Belanja</span></a>
+                              <a href = "#tab3" class = "button col button tab-link" data-sheet=".my-sheet-swipe-to-close"><i class="f7-icons">phone</i> <span>Hubungi</span></a>
+
                            </div>
                         </div>
                   <div class = "tabs-swipeable-wrap">
                      <div class = "tabs">
                         <div id = "tab1" class = "page-content with-subnavbar tab active">
                            <div class = "content-block">
-                              <p>HOMEPAGE</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque 
-                                 elementum mi quis felis scelerisque faucibus. Aliquam ut commodo justo. Mauris 
-                                 vitae pharetra arcu. Sed tincidunt dui et nibh auctor pretium. Nam accumsan 
-                                 fermentum sem. Suspendisse potenti. Nulla sed orci malesuada, pellentesque elit 
-                                 vitae, cursus lorem. Praesent et vehicula sapien, ut rhoncus quam. Lorem ipsum 
-                                 dolor sit amet, consectetur adipiscing elit. In vitae mi nec lorem aliquet venenatis 
-                                 quis nec nibh. Aenean sit amet leo ligula. Fusce in  massa et nisl dictum ultricies et
-                                 vitae dui. Sed sagittis quis diam sed lobortis. Donec in massa pharetra, tristique 
-                                 purus vitae, consequat mauris. Aliquam tellus ante, pharetra in mattis ut, dictum 
-                                 quis erat.</p>
+
+
+      <div class="block-title">Cards With List View</div>
+      <div class="card">
+        <div class="card-content">
+          <div class="list links-list no-ios-edges">
+            <ul>
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+              <li><a href="#">Link 5</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
                            </div>
                         </div>
                         
@@ -153,17 +164,6 @@ a {
          </div>
       </div>
 
- <div class="sheet-modal" style="height: auto">
-  <div class="sheet-modal-inner">
-    <!-- initial sheet modal content -->
-    <div class="sheet-modal-swipe-step">
-      ...
-    </div>
-    <!-- rest of the content that will be opened with extra swipe -->
-    ...
-  </div>
-</div>
-
       <script type = "text/javascript" 
          src = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
          
@@ -180,6 +180,7 @@ a {
             dynamicNavbar: true
          });
       </script>
+
    </body>
 
 </html>
