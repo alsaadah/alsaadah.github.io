@@ -15,11 +15,37 @@
       <link rel="stylesheet" 
          href="https://cdn.jsdelivr.net/npm/framework7-icons@4.0.1/css/framework7-icons.min.css" />
 <style>
+.navbar-fixed .page .subnavbar, .navbar-fixed.page .subnavbar, .navbar-through .page .subnavbar, .navbar-through.page .subnavbar {
+    top: 0px;
+}
 .navbar, .subnavbar, .toolbar {
     background: #fff;
 }
+.subnavbar {
+    height: 44px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: -1px;
+    z-index: 20;
+    box-sizing: border-box;
+    padding: 0 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
 .button.active {
-    background: #fff;
+    background: transparent;
     color: #888;
 }
 .buttons-row .button:first-child {
@@ -33,7 +59,7 @@
     text-decoration: none;
     text-align: center;
     display: block;
-    border-radius: 5px;
+    border-radius: 0px;
     line-height: 27px;
     box-sizing: border-box;
     -webkit-appearance: none;
@@ -41,7 +67,7 @@
     -ms-appearance: none;
     appearance: none;
     background: 0 0;
-    padding: 0 10px;
+    padding: 0 0px;
     margin: 0;
     height: 29px;
     white-space: nowrap;
@@ -66,23 +92,14 @@ a {
          <div class = "view view-main">
             <div class = "pages navbar-fixed">
                <div data-page = "home" class = "page with-subnavbar">
-                  
-                  <div class = "navbar no-shadow">
-                     <div class = "navbar-inner">
-<div class="left"><a href="#" data-sheet=".my-sheet-swipe-to-step" class="link color-black sheet-open"><i class="f7-icons">exclamationmark_circle</i></a></div>
-                        <div class = "center title">AL-SAADAH BUTIK DEMO</div>
-<div class="right"><a href="#" class="link color-black"><i class="f7-icons">bag</i></a></div>
-                        <div class = "subnavbar bg-white">
+                      <div class = "subnavbar bg-white no-shadow">
                           <div class = "buttons-row">
-                              <a href = "#tab1" class = "button col button active tab-link">Beranda</a>
-                              <a href = "#tab2" class = "button col button tab-link">Promo</a>
-                              <a href = "#tab3" class = "button col button tab-link">Partners</a>
+                              <a href = "#tab1" class = "button col button active tab-link"><i class="f7-icons">house_alt</i></a>
+                              <a href = "#tab2" class = "button col button tab-link"><i class="f7-icons">bag</i></a>
+                              <a href = "#tab3" class = "button col button tab-link"><i class="f7-icons">info_circle
+</i></a>
                            </div>
                         </div>
-                     </div>
-                  </div>
-       
-         
                   <div class = "tabs-swipeable-wrap">
                      <div class = "tabs">
                         <div id = "tab1" class = "page-content with-subnavbar tab active">
